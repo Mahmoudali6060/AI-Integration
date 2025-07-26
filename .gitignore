@@ -1,3 +1,20 @@
+
+
+# === Python Cache Files ===
+__pycache__/
+*.py[cod]
+*$py.class
+
+# pipenv / poetry / venvs
+*.egg-info/
+.eggs/
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+
 # ===== .NET Core =====
 bin/
 obj/
