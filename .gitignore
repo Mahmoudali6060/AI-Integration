@@ -1,0 +1,77 @@
+# ===== .NET Core =====
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vspx
+*.vssscc
+*.vspscc
+*.ncrunch*
+*.ndoc
+*.snk
+_ReSharper*/
+*.DotSettings.user
+.vscode/
+*.swp
+*.tmp
+
+# VS Code settings
+.vscode/
+
+# Rider
+.idea/
+
+# ASP.NET
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# DotCover
+*.dotCover
+
+# Logs
+*.log
+
+# ===== Angular =====
+# compiled output
+dist/
+tmp/
+out-tsc/
+
+# dependencies
+node_modules/
+
+# IDEs
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Angular specific
+.angular/
+.angular-cache/
+
+# testing
+coverage/
+
+# environment
+.env
+.env.*
+
+# misc
+.DS_Store
+Thumbs.db
+
+# ===== Others =====
+*.bak
+*.orig
+*.rej
+*.swp
+*.swo
+*.zip
+*.tar.gz
+*.tgz
+
+# Local config
+local.settings.json

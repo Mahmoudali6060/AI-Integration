@@ -1,0 +1,45 @@
+<div class="p-4 max-w-2xl mx-auto space-y-4">
+  <h1 class="text-3xl font-bold text-center">AI Financial Analyzer 💹</h1>
+
+  <div class="flex gap-2">
+    <textarea
+      class="w-full p-3 border rounded grow"
+      rows="5"
+      [(ngModel)]="promptText"
+      placeholder="Enter the financial project description here..."
+    ></textarea>
+    <button
+      class="bg-gray-200 hover:bg-gray-300 px-3 rounded"
+      title="🎤 Voice Input"
+      (click)="useMic()"
+    >🎤</button>
+  </div>
+
+  <button
+    class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition"
+    (click)="analyzeText()"
+    [disabled]="loading"
+  >
+    {{ loading ? 'Analyzing...' : '🚀 Analyze' }}
+  </button>
+
+  <div *ngIf="resultText" class="bg-gray-100 p-4 rounded shadow space-y-2">
+    <div class="flex justify-between items-center">
+      <h2 class="font-semibold">🧠 Result</h2>
+      <div class="flex gap-2">
+        <button class="text-sm text-blue-600" (click)="copyResult()">📋 Copy</button>
+        <button class="text-sm text-green-600" (click)="downloadPDF()">⬇️ PDF</button>
+      </div>
+    </div>
+    <pre class="whitespace-pre-wrap text-sm">{{ resultText }}</pre>
+  </div>
+
+  <!-- <div *ngIf="chartData.datasets[0].data[0] > 0" class="mt-6">
+    <h2 class="font-semibold mb-2">📊 Net Profit vs Total Cost</h2>
+    <canvas baseChart
+      [data]="chartData"
+      [type]="chartType"
+      [options]="chartOptions"
+    ></canvas>
+  </div> -->
+</div>
